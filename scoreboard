@@ -1,0 +1,25 @@
+import turtle
+from turtle import Turtle, Screen
+
+class Scoreboard(Turtle):
+    def __init__(self, score):
+        super().__init__()
+        self.hideturtle()
+        self.penup()
+        self.score = score
+        self.color('white')
+        self.speed(0)
+        self.goto(0, 250)
+        self.write(f"Score: {self.score}", False, align="center",font=('Arial', 15, 'bold'))
+
+    def add_to_score(self):
+        self.score += 1
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("GAME OVER", False, align="center", font=('Arial', 15, 'bold'))
+
+
+
+
+
